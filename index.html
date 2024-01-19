@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon clone css</title>
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(min-device-width: 319px) and (max-device-width: 480px)" href="./mobile.css">
 </head>
 
 <body>
@@ -17,15 +19,20 @@
             <div id="navbelt">
                 <div class="first">
                     <div id="logo" class="border">
-                        <a href="#">
-                            <div id="logo-img"></div>
-                        </a>
+                        <div class="icon block">
+                            <i class="fa-solid fa-bars icon-item"></i>
+                        </div>
+                        <div class="img-container">
+                            <a href="#">
+                                <div id="logo-img"></div>
+                            </a>
+                        </div>
                     </div>
 
-                    <div id="main-heading" class="border">
+                    <div id="main-heading" class="border invisible">
                         <a href="#"></a>
                         <div id="location-icon">
-                            <img src="images/location.png" alt="">
+                            <img src="images/location.png">
                         </div>
                         <div id="loc-text">
                             <span class="loc-line">Delivering to chandigarh 160101</span>
@@ -33,16 +40,37 @@
                         </div></a>
                     </div>
 
+                    <div class="first-right block">
+                        <div class="signIn">
+                            Sign in
+                        </div>
+                        <div class="user">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="crt">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="nav-search">
-                    <select name="categories" id="drop">
-                        <option value="">All</option>
+                    <select name="categories" class="invisible" id="drop">
+                        <option  value="">All</option>
                     </select>
                     <input type="text" placeholder="Search Amazon">
                     <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
                 </div>
 
-                <div class="right">
+                <div class="location block">
+                    <div class="loc-icon">
+                        <i class="fa-solid fa-location-dot"></i> 
+                    </div>
+                    <div class="loc-para block">
+                        Delivering to chandigarh 160101
+                    </div>
+                </div>
+
+                <div class="right invisible">
                     <div class="lang border">
                         <div class="flag"></div>
                         <select name="lang" id="language">
@@ -65,9 +93,10 @@
                         <p class="small">Cart</p>
                     </div>
                 </div>
+
             </div>
             </div>
-            <div class="nav-small-belt">
+            <div class="nav-small-belt invisible">
                 <div class="left-side">
                     <div class="round text-item prime">
                         <i style="padding-right: 3px;" class="fa-solid fa-bars"></i>
@@ -85,8 +114,8 @@
                     <div class="round text-item">
                         <p>Best Seller</p>
                     </div>
-                    <div class="round text-item">
-                        <p>Today's Deals</p>
+                    <div class="round text-item block">
+                        <p class="block">Today's Deals</p>
                     </div>
                     <div class="round text-item">
                         <p>Mobiles</p>
@@ -106,14 +135,11 @@
                     </div>
                 </div>       
                 <div class="right-side">
-                </div>
+                </div> 
         </nav>
     </header>
-    <main>
+     <main>
     <div class="banner">
-        <div class="sign-btn">
-            <!-- <i class="fa-solid fa-less-than large-btn"></i>
-        <i class="fa-solid fa-greater-than small-btn" ></i> -->
     </div>
         
     </div>
@@ -125,20 +151,28 @@
                 </div>
                 <div class="card">
                     <div class="two_img">
-                        <div class="img" style="background-image: url(images/clothes.jpg);">
-                            <p class="img_detail">Fashion wearing</p>
-                        </div>
-                    <div class="img" style="background-image: url(images/cushion.jpg);">
-                        <p class="img_detail">Cushions covers,</p>
-                    </div>
+                       <div class="img_box">
+                        <div class="img" style="background-image: url(images/clothes.jpg);"></div>
+                        <p class="img_detail">Fashion wearing</p>
+                       </div>
+                    
+                       <div class="img_box">
+                        <div class="img" style="background-image: url(images/cushion.jpg);"></div>
+                            <p class="img_detail">Cushions covers,</p>
+                       </div>
+
                     </div>
                     <div class="two_img">
-                        <div class="img" style="background-image: url(images/img-homeStore.jpg);">
-                            <p class="img_detail">Flower port</p>
+                        <div class="img_box">
+                            <div class="img" style="background-image: url(images/img-homeStore.jpg);"></div>
+                        <p class="img_detail">Flower port</p>
                         </div>
-                    <div class="img" style="background-image: url(images/Indoor_ligting.jpg);">
-                        <p class="img_detail" >Indoor lighting</p>
-                    </div>
+                    
+                        <div class="img_box">
+                            <div class="img" style="background-image: url(images/Indoor_ligting.jpg);"></div>
+                            <p class="img_detail" >Indoor lighting</p>
+                        </div>
+
                     </div>
                 </div>
                 <div class="card-bottom">
@@ -151,20 +185,27 @@
                 </div>
                 <div class="card">
                     <div class="two_img">
-                        <div class="img" style="background-image: url(images/mops.jpg);">
+                        <div class="img_box">
+                            <div class="img" style="background-image: url(images/mops.jpg);"></div>
                             <p class="img_detail">Spin mops,wipes & more</p>
                         </div>
-                    <div class="img" style="background-image: url(images/hardware.jpg);">
+                        
+                    <div class="img_box">
+                        <div class="img" style="background-image: url(images/hardware.jpg);"></div>
                         <p class="img_detail">Bathroom hardware & accessories</p>
                     </div>
                     </div>
                     <div class="two_img">
-                        <div class="img" style="background-image: url(images/hammer.jpg);">
+                        <div class="img_box">
+                            <div class="img" style="background-image: url(images/hammer.jpg);"></div>
                             <p class="img_detail">Hammers, screwdrivers & more</p>
                         </div>
-                    <div class="img" style="background-image: url(images/extensions.jpg);">
-                        <p class="img_detail">Extension boards, plugs & more</p>
-                    </div>
+
+                        <div class="img_box">
+                            <div class="img" style="background-image: url(images/extensions.jpg);"></div>
+                            <p class="img_detail">Extension boards, plugs & more</p>
+                        </div>
+
                     </div>
                 </div>
                 <div class="card-bottom">
@@ -177,20 +218,24 @@
                 </div>
                 <div class="card">
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/bottle.jpg');">
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/bottle.jpg');"></div>
                             <p class="img_detail">Water bottles</p>
                         </div>
-                    <div class="img" style="background-image: url('images/container.jpg');">
-                        <p class="img_detail">Storage containers</p>
-                    </div>
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/container.jpg');"></div>
+                            <p class="img_detail">Storage containers</p>
+                        </div>
                     </div>
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/cookware.jpg');">
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/cookware.jpg');"></div>
                             <p class="img_detail">Cookware</p>
                         </div>
-                    <div class="img" style="background-image: url('images/racks.jpg');">
-                        <p class="img_detail">Racks & holders</p>
-                    </div>
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/racks.jpg');"></div>
+                            <p class="img_detail">Racks & holders</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card-bottom">
@@ -203,20 +248,24 @@
                 </div>
                 <div class="card">
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/ac.jpg');">
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/ac.jpg');"></div>
                             <p class="img_detail">Air conditioners</p>
                         </div>
-                    <div class="img" style="background-image: url('images/refrigerator.jpg');">
-                        <p class="img_detail">Refrigerators</p>
-                    </div>
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/refrigerator.jpg');"></div>
+                            <p class="img_detail">Refrigerators</p>
+                        </div>
                     </div>
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/microwaves.jpg');">
-                            <p class="img_detail">Microwaveses</p>
-                        </div>
-                    <div class="img" style="background-image: url('images/washing\ machines.jpg');">
-                        <p class="img_detail">Washing machines</p>
-                    </div>
+                            <div class="img_box">
+                                <div class="img" style="background-image: url('images/microwaves.jpg');"></div>
+                                <p class="img_detail">Microwaveses</p>
+                            </div>
+                            <div class="img_box">
+                                <div class="img" style="background-image: url('images/washing\ machines.jpg');"></div>
+                                <p class="img_detail">Washing machines</p>
+                            </div>
                     </div>
                 </div>
                 <div class="card-bottom">
@@ -230,20 +279,24 @@
             </div>
             <div class="card">
                 <div class="two_img">
-                    <div class="img" style="background-image: url('images/flight.jpg');">
+                    <div class="img_box">
+                        <div class="img" style="background-image: url('images/flight.jpg');"></div>
                         <p class="img_detail">Up tp ₹5000 off |Flight tickets</p>
                     </div>
-                <div class="img" style="background-image: url('images/trains.jpg');">
-                    <p class="img_detail">Zero gateway fees on trains</p>
-                </div>
+                    <div class="img_box">
+                        <div class="img" style="background-image: url('images/trains.jpg');"></div>
+                        <p class="img_detail">Zero gateway fees on trains</p>
+                    </div>
                 </div>
                 <div class="two_img">
-                    <div class="img" style="background-image: url('images/buses.jpg');">
+                    <div class="img_box">
+                        <div class="img" style="background-image: url('images/buses.jpg');"></div>
                         <p class="img_detail">Bus ticket bookings</p>
                     </div>
-                <div class="img" style="background-image: url('images/flight.jpg');">
-                    <p class="img_detail">Products for your tarvel needs</p>
-                </div>
+                    <div class="img_box">
+                        <div class="img" style="background-image: url('images/travel_need.jpg');"></div>
+                        <p class="img_detail">Products for your tarvel needs</p>
+                    </div>
                 </div>
             </div>
             <div class="card-bottom">
@@ -255,20 +308,24 @@
                 </div>
                 <div class="card">
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/clothing.jpg');">
-                            <p class="img_detail">Clothing</p>
-                        </div>
-                    <div class="img" style="background-image: url('images/footware.jpg');">
-                        <p class="img_detail">Footwear</p>
-                    </div>
+                            <div class="img_box">
+                                <div class="img" style="background-image: url('images/clothing.jpg');"></div>
+                                <p class="img_detail">Clothing</p>
+                            </div>
+                            <div class="img_box">
+                                <div class="img" style="background-image: url('images/footware.jpg');"></div>
+                                <p class="img_detail">Footwear</p>
+                            </div>
                     </div>
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/watches.jpg');">
-                            <p class="img_detail">Watches</p>
-                        </div>
-                    <div class="img" style="background-image: url('images/bags.jpg');">
-                        <p class="img_detail">Bags & wallets</p>
-                    </div>
+                            <div class="img_box">
+                                <div class="img" style="background-image: url('images/watches.jpg');"></div>
+                                <p class="img_detail">Watches</p>
+                            </div>
+                            <div class="img_box">
+                                <div class="img" style="background-image: url('images/bags.jpg');"></div>
+                                <p class="img_detail">Bags & wallets</p>
+                            </div>
                     </div>
                 </div>
                 <div class="card-bottom">
@@ -281,20 +338,24 @@
                 </div>
                 <div class="card">
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/diapers.jpg');">
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/diapers.jpg');"></div>
                             <p class="img_detail">Starting ₹179 | Diapers &wipers</p>
                         </div>
-                    <div class="img" style="background-image: url('images/cardels.jpg');">
-                        <p class="img_detail">Up to 60% off | Baby cardels & more</p>
-                    </div>
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/cardels.jpg');"></div>
+                            <p class="img_detail">Up to 60% off | Baby cardels & more</p>
+                        </div>
                     </div>
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/games.jpg');">
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/games.jpg');"></div>
                             <p class="img_detail">starting ₹299 | Soft toys & Indoor games</p>
                         </div>
-                    <div class="img" style="background-image: url('images/outdoor_games.jpg');">
-                        <p class="img_detail">Minimum 40% off | Outdoor games</p>
-                    </div>
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/outdoor_games.jpg');"></div>
+                            <p class="img_detail">Minimum 40% off | Outdoor games</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card-bottom">
@@ -307,20 +368,24 @@
                 </div>
                 <div class="card">
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/clothing2.jpg');">
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/clothing2.jpg');"></div>
                             <p class="img_detail">Clothing</p>
                         </div>
-                    <div class="img" style="background-image: url('images/backpacks.jpg');">
-                        <p class="img_detail">Backpacks</p>
-                    </div>
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/backpacks.jpg');"></div>
+                            <p class="img_detail">Backpacks</p>
+                        </div>
                     </div>
                     <div class="two_img">
-                        <div class="img" style="background-image: url('images/footware2.jpg');">
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/footware2.jpg');"></div>
                             <p class="img_detail">Footwear</p>
                         </div>
-                    <div class="img" style="background-image: url('images/view_all.jpg');">
-                        <p class="img_detail">View all</p>
-                    </div>
+                        <div class="img_box">
+                            <div class="img" style="background-image: url('images/view_all.jpg');"></div>
+                            <p class="img_detail">View all</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card-bottom">
@@ -333,10 +398,10 @@
     </main>
     <footer>
         <div class="back-to-top">
-            <a href="main"><p>Back to top</p></a>
+            <a href="#main"><p>Back to top</p></a>
         </div>
         <div class="footer_main">
-            <div class="footer_details">
+            <div class="footer_details invisible">
                 <div class="footer_box">
                     <div class="box_heading">
                         <p>Get to Know Us</p>
@@ -386,12 +451,62 @@
                     </div>
                 </div>
             </div>
+
+            <div class="mobile_footer block">
+                <div class="sell_section">
+                    <p>Your Amazon.in</p>
+                    <p>Amazon pay</p>
+                    <p>Your Lists</p>
+                    <p>Your Recently Viewed items</p>
+                    <p> Sell</p>
+                </div>
+                <div class="order_section">
+                    <p>Your Order</p>
+                    <p>Amazon App DownLoad</p>
+                    <p>Yor Account</p>
+                    <p>Returns</p>
+                    <p> Customer Service</p>
+                </div>
+            
+                <div class="color">
+                <div class="english">
+                    <div class="eng_box">
+                        <div class="glo">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div class="english_text">English</div>
+                    </div>
+                </div>
+    
+                <div class="arc">
+                    <p>Already a customer?<span>Sign in</span></p>
+                </div>
+            </div>
+               
+        
+            </div>
         </div>
         <div class="footer-bottom">
             <div class="logo" style="background-image: url('images/logos.png');"></div>
             <div class="languages"></div>
         </div>
         
+        <div class="copy_sec">
+            <div class="condition">
+                <div class="con_text">
+                    <p>Condition of Use</p>
+                </div>
+                <div class="con_text">
+                    <p>Privacy Notice</p>
+                </div>
+                <div class="con_text">
+                    <p>Internet-Based Ads</p>
+                </div>
+            </div>
+            <div class="copy_sign">
+                &copy; 1996-2023, Amazon.in,Inc. and its affiliates
+            </div>
+        </div>
     </footer>
 
     <script src="app.js"></script>
