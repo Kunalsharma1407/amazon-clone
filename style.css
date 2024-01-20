@@ -181,9 +181,10 @@ a{
     .banner{
         background-image: url("./images/img_off.jpg");
         background-repeat: no-repeat;
-        background-size:  auto auto;
+        background-size: 100% 100%;
+        object-fit: cover;
         width: 100vw;
-        height: 100vw;
+        height: 50vh;
     }
 
     .main{
@@ -202,7 +203,7 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         margin-top: 0.5rem;
         width: 95%;
         min-height: 50vh;
@@ -217,7 +218,7 @@ a{
 
     .card-heading{
         justify-self: center;
-        font-size: 1rem;
+        font-size: 1.1rem;
         width: 100%;
     }
 
@@ -227,7 +228,7 @@ a{
         background-color: white ;
         justify-content: center;
         width: 100%;
-        height: 50vh;
+        height: 80%;
         flex-wrap: wrap;
         border-radius: 5px;
         
@@ -253,7 +254,7 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         height: 90%;
         width: 50%;
     }
