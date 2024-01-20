@@ -227,7 +227,7 @@ a{
         background-color: white ;
         justify-content: center;
         width: 100%;
-        height: 70vh;
+        height: 50vh;
         flex-wrap: wrap;
         border-radius: 5px;
         
@@ -262,7 +262,7 @@ a{
         height: 70%;
         width: 90%;
         background-repeat: no-repeat;
-        background-size: 100% auto;
+        object-fit: contain;
     }
     .img_detail{
         width: 90%;
